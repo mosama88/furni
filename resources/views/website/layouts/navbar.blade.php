@@ -35,11 +35,12 @@
                     @endif --}}
 
 
-                    <a href="#" class="icon-btn"><i class="fa-solid fa-heart"></i><span
+                    <a href="{{ route('wishlist') }}" class="icon-btn"><i class="fa-solid fa-heart"></i><span
                             class="badge-count">0</span></a>
-                    <a href="#" class="icon-btn"><i class="fa-solid fa-cart-shopping"></i><span
+                    <a href="{{ route('carts') }}" class="icon-btn"><i class="fa-solid fa-cart-shopping"></i><span
                             class="badge-count">2</span></a>
-                    <a href="#" class="btn-login ms-3"><i class="fa-solid fa-user"></i> تسجيل الدخول</a>
+                    <a href="{{ route('login') }}" class="btn-login ms-3"><i class="fa-solid fa-user"></i> تسجيل
+                        الدخول</a>
                 </div>
             </div>
         </div>

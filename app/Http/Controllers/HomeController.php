@@ -23,7 +23,7 @@ class HomeController extends Controller
 
     public function product()
     {
-        return view('website.shop');
+        return view('website.products');
     }
 
 

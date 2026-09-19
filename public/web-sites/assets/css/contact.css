@@ -1,0 +1,228 @@
+:root {
+    --theme-dark: #141311;
+    --theme-yellow: #e5b940;
+    --theme-gray: #f8f9fa;
+    --text-light: #e0e0e0;
+}
+
+body {
+    font-family: "Tajawal", "Cairo", sans-serif;
+    background-color: var(--theme-gray);
+    color: #333;
+}
+
+/* ==================== Navbar Styles ==================== */
+.custom-navbar {
+    background-color: var(--theme-dark);
+    border-bottom: 2px solid #2a2825;
+    padding: 12px 0;
+}
+.navbar-brand {
+    color: #fff !important;
+    font-weight: 800;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.navbar-brand .logo-icon {
+    color: var(--theme-yellow);
+    font-size: 1.4rem;
+}
+.navbar-nav .nav-link {
+    color: #ccc;
+    font-weight: 500;
+    font-size: 1.05rem;
+    margin: 0 12px;
+    padding: 10px 5px !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--theme-yellow);
+}
+.navbar-nav .nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--theme-yellow);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.icon-btn {
+    background: transparent;
+    border: 1px solid #555;
+    color: #fff;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+}
+.icon-btn:hover {
+    border-color: var(--theme-yellow);
+    color: var(--theme-yellow);
+}
+.icon-btn .badge-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--theme-yellow);
+    color: #000;
+    font-size: 0.75rem;
+    font-weight: 700;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid var(--theme-dark);
+}
+.btn-login {
+    background-color: var(--theme-yellow);
+    color: #000;
+    font-weight: 700;
+    border: none;
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+.btn-login:hover {
+    background-color: #d1a636;
+    color: #000;
+}
+
+/* ==================== Page Header ==================== */
+.page-header {
+    background:
+        linear-gradient(rgba(20, 19, 17, 0.85), rgba(20, 19, 17, 0.85)),
+        url("https://images.unsplash.com/photo-1618221195710-dd6b142db2df?auto=format&fit=crop&w=1920&q=80")
+            center/cover;
+    padding: 70px 0;
+    border-bottom: 4px solid var(--theme-yellow);
+    text-align: center;
+}
+.page-title {
+    color: #fff;
+    font-weight: 800;
+    margin: 0;
+    font-size: 2.5rem;
+}
+.breadcrumb {
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+.breadcrumb a {
+    color: var(--theme-yellow);
+    text-decoration: none;
+}
+.breadcrumb-item.active {
+    color: #aaa;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #aaa;
+}
+
+/* ==================== Contact Page Specific Styles ==================== */
+.contact-info-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+    height: 100%;
+    border-top: 3px solid var(--theme-yellow);
+}
+.contact-icon-box {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(229, 185, 64, 0.15);
+    color: var(--theme-yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    margin-left: 15px;
+}
+.contact-item {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+.contact-title {
+    font-weight: 700;
+    color: var(--theme-dark);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+.contact-text {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Form Styles */
+.form-control {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+.form-control:focus {
+    border-color: var(--theme-yellow);
+    box-shadow: 0 0 0 0.25rem rgba(229, 185, 64, 0.25);
+    background-color: #fff;
+}
+.form-label {
+    font-weight: 600;
+    color: var(--theme-dark);
+}
+.btn-submit {
+    background-color: var(--theme-dark);
+    color: #fff;
+    font-weight: 700;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    width: 100%;
+    font-size: 1.1rem;
+}
+.btn-submit:hover {
+    background-color: var(--theme-yellow);
+    color: #000;
+}
+
+/* Map Container */
+.map-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    height: 450px;
+    border: 1px solid #eee;
+}
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+

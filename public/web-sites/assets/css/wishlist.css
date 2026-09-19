@@ -1,0 +1,150 @@
+/* ==================== Page Header ==================== */
+.page-header {
+    background-color: var(--theme-dark);
+    padding: 40px 0;
+    border-bottom: 4px solid var(--theme-yellow);
+    text-align: center;
+}
+.page-title {
+    color: #fff;
+    font-weight: 800;
+    margin: 0;
+    font-size: 2.2rem;
+}
+.breadcrumb {
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+.breadcrumb a {
+    color: var(--theme-yellow);
+    text-decoration: none;
+}
+.breadcrumb-item.active {
+    color: #aaa;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #aaa;
+}
+
+/* ==================== Wishlist Products ==================== */
+.wishlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+.product-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transform: translateY(-5px);
+}
+.product-img-box {
+    position: relative;
+    overflow: hidden;
+    height: 280px;
+    background-color: #fafafa;
+}
+.product-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.product-card:hover .product-img-box img {
+    transform: scale(1.05);
+}
+
+/* زر إزالة من المفضلة */
+.btn-remove-wishlist {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #dc3545;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    z-index: 2;
+}
+.btn-remove-wishlist:hover {
+    background: #dc3545;
+    color: #fff;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    background-color: var(--theme-dark);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.product-card:hover .add-to-cart-btn {
+    opacity: 1;
+    visibility: visible;
+}
+.add-to-cart-btn:hover {
+    background-color: var(--theme-yellow);
+    color: #000;
+}
+
+.product-info {
+    padding: 20px;
+    text-align: center;
+}
+
+/* حالة المخزون */
+.stock-status {
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+.stock-in {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+}
+.stock-out {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+
+.product-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--theme-dark);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+.product-name:hover {
+    color: var(--theme-yellow);
+}
+.product-price {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--theme-yellow);
+}
