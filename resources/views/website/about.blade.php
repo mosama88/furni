@@ -1,21 +1,20 @@
 @extends('website.layouts.master')
 @section('title', 'من نحن')
+@section('active-abouts', 'active')
+
 @push('css')
     <link rel="stylesheet" href="{{ asset('web-sites') }}/assets/css/about.css">
 @endpush
 @section('content')
     <!-- ==================== Page Header ==================== -->
-    <header class="page-header">
-        <div class="container">
-            <h1 class="page-title">اكتشف قصتنا</h1>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">من نحن</li>
-                </ol>
-            </nav>
-        </div>
-    </header>
+
+    @include('website.layouts.page-header', [
+        'pageTitle' => 'اكتشف قصتنا',
+        'homePage' => 'الرئيسية',
+        'currentPage' => 'من نحن',
+    ])
+
+
     <main class="py-5">
 
         <div class="container px-lg-5">

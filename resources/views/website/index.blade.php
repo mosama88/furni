@@ -1,5 +1,6 @@
 @extends('website.layouts.master')
 @section('title', 'الرئيسية')
+@section('active-home', 'active')
 
 @section('content')
     <main>

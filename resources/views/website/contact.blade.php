@@ -1,22 +1,20 @@
 @extends('website.layouts.master')
 @section('title', 'أتصل بنا')
+@section('active-contacts', 'active')
+
 @push('css')
     <link rel="stylesheet" href="{{ asset('web-sites') }}/assets/css/contact.css">
 @endpush
 @section('content')
 
     <!-- ==================== Page Header ==================== -->
-    <header class="page-header">
-        <div class="container">
-            <h1 class="page-title">تواصل معنا</h1>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">اتصل بنا</li>
-                </ol>
-            </nav>
-        </div>
-    </header>
+
+    @include('website.layouts.page-header', [
+        'pageTitle' => 'تواصل معنا',
+        'homePage' => 'الرئيسية',
+        'currentPage' => 'اتصل بنا',
+    ])
+
 
     <!-- ==================== Main Content ==================== -->
     <main class="py-5">
@@ -98,13 +96,12 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">رقم الهاتف</label>
-                                    <input type="tel" class="form-control" name="phone"
-                                        placeholder="أدخل رقم هاتفك">
+                                    <input type="tel" class="form-control" name="phone" placeholder="أدخل رقم هاتفك">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">الموضوع</label>
-                                    <input type="text" class="form-control" name="subject"
-                                        placeholder="موضوع الرسالة" required>
+                                    <input type="text" class="form-control" name="subject" placeholder="موضوع الرسالة"
+                                        required>
                                 </div>
                                 <div class="col-12">
                                     <label class="form-label">تفاصيل الرسالة</label>

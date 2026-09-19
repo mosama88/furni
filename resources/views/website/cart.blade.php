@@ -1,23 +1,17 @@
-
-
 @extends('website.layouts.master')
 @section('title', 'عربة التسوق')
 @push('css')
     <link rel="stylesheet" href="{{ asset('web-sites') }}/assets/css/carts.css">
 @endpush
 @section('content')
+
     <!-- ==================== Page Header ==================== -->
-    <header class="page-header">
-        <div class="container">
-            <h1 class="page-title">عربة التسوق</h1>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">الرئيسية</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">عربة التسوق</li>
-                </ol>
-            </nav>
-        </div>
-    </header>
+    @include('website.layouts.page-header', [
+        'pageTitle'=> 'عربة التسوق',
+        'homePage' => 'الرئيسية',
+        'currentPage' => 'عربة التسوق',
+    ])
+
 
     <!-- ==================== Main Cart Content ==================== -->
     <main class="py-5 my-3">

@@ -1,21 +1,18 @@
 @extends('website.layouts.master')
 @section('title', 'تصفح المنتجات')
+@section('active-products', 'active')
+
 @push('css')
     <link rel="stylesheet" href="{{ asset('web-sites') }}/assets/css/products.css">
 @endpush
 @section('content')
     <!-- ==================== Page Header ==================== -->
-    <header class="page-header">
-        <div class="container">
-            <h1 class="page-title">تصفح المنتجات</h1>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">تصفح المنتجات</li>
-                </ol>
-            </nav>
-        </div>
-    </header>
+
+    @include('website.layouts.page-header', [
+        'pageTitle' => 'تصفح المنتجات',
+        'homePage' => 'الرئيسية',
+        'currentPage' => 'تصفح المنتجات',
+    ])
 
     <!-- ==================== Shop Content ==================== -->
     <main class="py-5">
