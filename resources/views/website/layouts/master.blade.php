@@ -9,10 +9,8 @@
 
     <!-- ==================== HEADER ==================== -->
     @include('website.layouts.navbar')
-    <main>
         @yield('content')
 
-    </main>
 
     <!-- ==================== FOOTER ==================== -->
     @include('website.layouts.footer')
