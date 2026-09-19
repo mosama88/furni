@@ -1,0 +1,241 @@
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-btn {
+    background: transparent;
+    border: 1px solid #555;
+    color: #fff;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+.icon-btn:hover {
+    border-color: var(--theme-yellow);
+    color: var(--theme-yellow);
+}
+
+.icon-btn .badge-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--theme-yellow);
+    color: #000;
+    font-size: 0.75rem;
+    font-weight: 700;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid var(--theme-dark);
+}
+
+.btn-login {
+    background-color: var(--theme-yellow);
+    color: #000;
+    font-weight: 700;
+    border: none;
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn-login:hover {
+    background-color: #d1a636;
+    color: #000;
+}
+
+/* ==================== Page Header ==================== */
+.page-header {
+    background-color: var(--theme-dark);
+    padding: 40px 0;
+    border-bottom: 4px solid var(--theme-yellow);
+    text-align: center;
+}
+
+.page-title {
+    color: #fff;
+    font-weight: 800;
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.breadcrumb {
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.breadcrumb a {
+    color: var(--theme-yellow);
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #aaa;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #aaa;
+}
+
+/* ==================== Checkout Form Styles ==================== */
+.checkout-section-title {
+    font-weight: 800;
+    color: var(--theme-dark);
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    font-size: 1.5rem;
+}
+
+.form-label {
+    font-weight: 700;
+    color: var(--theme-dark);
+    font-size: 0.95rem;
+}
+
+.form-control,
+.form-select {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+    transition: 0.3s;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--theme-yellow);
+    box-shadow: 0 0 0 0.25rem rgba(229, 185, 64, 0.25);
+    background-color: #fff;
+}
+
+/* Payment Methods */
+.payment-method-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.payment-method-card:hover {
+    border-color: var(--theme-yellow);
+}
+
+.form-check-input:checked + .form-check-label {
+    font-weight: 700;
+    color: var(--theme-dark);
+}
+
+.form-check-input:checked {
+    background-color: var(--theme-yellow);
+    border-color: var(--theme-yellow);
+}
+
+.payment-icon {
+    font-size: 1.5rem;
+    color: #555;
+    margin-right: auto;
+}
+
+/* Order Summary Box */
+.summary-card {
+    background: #fff;
+    border: none;
+    border-top: 4px solid var(--theme-yellow);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 100px;
+}
+
+.summary-title {
+    font-weight: 800;
+    color: var(--theme-dark);
+    margin-bottom: 25px;
+}
+
+.mini-cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.mini-cart-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+.mini-cart-name {
+    font-weight: 700;
+    color: var(--theme-dark);
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.mini-cart-price {
+    color: var(--theme-yellow);
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #555;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px dashed #ddd;
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: var(--theme-dark);
+}
+
+.btn-place-order {
+    background-color: var(--theme-dark);
+    color: #fff;
+    font-weight: 800;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    margin-top: 25px;
+    transition: 0.3s;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.btn-place-order:hover {
+    background-color: var(--theme-yellow);
+    color: #000;
+}
