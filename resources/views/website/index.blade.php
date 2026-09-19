@@ -15,8 +15,8 @@
                         <p class="hero-subtitle">صناعة يدوية فائقة الجودة من خشب الجوز الأصيل والأقمشة المخملية الفاخرة
                             لتلائم أصحاب الذوق الرفيع.</p>
                         <div class="d-flex gap-3 flex-wrap">
-                            <a href="#" class="btn-hero-solid">تصفح المجموعة</a>
-                            <a href="#" class="btn-hero-outline">اكتشف قصتنا</a>
+                            <a href="{{route('products')}}" class="btn-hero-solid">تصفح المجموعة</a>
+                            <a href="{{route('abouts')}}" class="btn-hero-outline">اكتشف قصتنا</a>
                         </div>
                     </div>
                 </div>
