@@ -1,0 +1,94 @@
+/* ================================================================
+   ملف التنسيقات الخاص باللغة الإنجليزية (LTR) - متجر دار الأثاث الفاخر
+   ================================================================ */
+
+body {
+    direction: ltr;
+    text-align: left;
+    /* نستخدم خطوطاً إنجليزية تناسب الفخامة مثل Outfit أو Poppins */
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ==================== Navbar ==================== */
+.navbar-brand {
+    flex-direction: row;
+}
+
+.navbar-nav .nav-link.active::after {
+    right: auto;
+    left: 0; /* نقل الخط الأصفر تحت الرابط لليسار */
+}
+
+.icon-btn .badge-count {
+    left: auto;
+    right: -10px; /* إعادة البادج (الرقم) إلى أعلى اليمين في اللغة الإنجليزية */
+}
+
+.btn-login i {
+    margin-left: 0;
+    margin-right: 8px; /* ضبط المسافة بين الأيقونة والنص في زر الدخول */
+}
+
+/* ==================== Hero Section ==================== */
+.hero-section {
+    /* عكس التدرج اللوني ليكون من اليسار لليمين ليغطي النص الإنجليزي */
+    background: linear-gradient(to right, rgba(20, 19, 17, 0.9) 0%, rgba(20, 19, 17, 0.4) 100%), url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1920&q=80') center/cover;
+}
+
+/* ==================== Sections Styling ==================== */
+.section-title::after {
+    right: auto;
+    left: 0; /* الخط الأصفر تحت عناوين الأقسام يكون على اليسار */
+}
+
+/* ==================== Product Cards ==================== */
+.badge-discount,
+.badge-new {
+    right: auto;
+    left: 15px; /* بادج الخصم يكون على اليسار */
+}
+
+.action-btns {
+    left: auto;
+    right: 15px; /* أزرار (المفضلة/العرض) تعود لليمين */
+
+    /* عكس حركة ظهور الأزرار (تأتي من اليمين لليسار في الإنجليزية) */
+    transform: translateX(20px);
+}
+
+.product-card:hover .action-btns {
+    transform: translateX(0);
+}
+
+.add-to-cart-btn i {
+    margin-left: 0;
+    margin-right: 8px; /* مسافة الأيقونة داخل زر أضف للسلة */
+}
+
+.btn-remove-wishlist {
+    left: auto;
+    right: 15px; /* زر الحذف في المفضلة يعود لليمين */
+}
+
+/* ==================== Checkout & Cart ==================== */
+/* ضبط مسافات أزرار الراديو في صفحة الدفع */
+.form-check-input.me-3 {
+    margin-left: 0 !important;
+    margin-right: 1rem !important;
+}
+
+.payment-icon {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* ==================== Footer ==================== */
+footer a:hover {
+    padding-right: 0;
+    padding-left: 8px; /* دفع الرابط لليمين (للداخل) عند تمرير الماوس باللغة الإنجليزية */
+}
+
+.footer-title i {
+    margin-left: 0;
+    margin-right: 8px;
+}

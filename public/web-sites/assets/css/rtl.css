@@ -1,0 +1,78 @@
+/* ================================================================
+   ملف التنسيقات الخاص باللغة العربية (RTL) - متجر دار الأثاث الفاخر
+   ================================================================ */
+
+body {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Tajawal', 'Cairo', sans-serif; /* الخطوط العربية */
+}
+
+/* ==================== Navbar ==================== */
+.navbar-nav .nav-link.active::after {
+    left: auto;
+    right: 0; /* نقل الخط الأصفر تحت الرابط لليمين */
+}
+
+.icon-btn .badge-count {
+    right: auto;
+    left: -10px; /* نقل دائرة عدد المنتجات لليسار بدلاً من اليمين */
+}
+
+/* ==================== Hero Section ==================== */
+.hero-section {
+    /* عكس اتجاه التدرج اللوني الداكن ليكون من اليمين لليسار ليناسب النص العربي */
+    background: linear-gradient(to left, rgba(20, 19, 17, 0.9) 0%, rgba(20, 19, 17, 0.4) 100%), url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1920&q=80') center/cover;
+}
+
+/* ==================== Sections Styling ==================== */
+.section-title::after {
+    left: auto;
+    right: 0; /* نقل الخط الأصفر تحت العناوين لليمين */
+}
+
+/* ==================== Product Cards ==================== */
+.badge-discount,
+.badge-new {
+    left: auto;
+    right: 15px; /* نقل البادج (جديد / خصم) لليمين */
+}
+
+.action-btns {
+    right: auto;
+    left: 15px; /* نقل أزرار (السلة/المفضلة/العرض) لليسار */
+
+    /* عكس حركة ظهور الأزرار (تأتي من اليسار لليمين بدلاً من العكس) */
+    transform: translateX(-20px);
+}
+
+.product-card:hover .action-btns {
+    transform: translateX(0);
+}
+
+.add-to-cart-btn {
+    left: auto;
+    right: 0; /* ضمان ظهور زر السلة السفلي بشكل كامل */
+}
+
+.btn-remove-wishlist {
+    right: auto;
+    left: 15px; /* نقل زر حذف المفضلة لليسار */
+}
+
+/* ==================== Checkout & Cart ==================== */
+.form-check-input.me-3 {
+    margin-right: 0 !important;
+    margin-left: 1rem !important; /* عكس مسافة أزرار الراديو */
+}
+
+.payment-icon {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+/* ==================== Footer ==================== */
+footer a:hover {
+    padding-left: 0;
+    padding-right: 8px; /* دفع الرابط لليسار عند تمرير الماوس عليه بدلاً من اليمين */
+}
