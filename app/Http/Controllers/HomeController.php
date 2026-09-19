@@ -21,7 +21,7 @@ class HomeController extends Controller
         return view('website.about');
     }
 
-    public function shop()
+    public function product()
     {
         return view('website.shop');
     }
@@ -46,6 +46,10 @@ class HomeController extends Controller
     public function cart()
     {
         return view('website.cart');
+    }
+    public function wishlist()
+    {
+        return view('website.wishlist');
     }
     public function payment()
     {
