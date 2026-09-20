@@ -134,7 +134,7 @@
                         <div class="col-md-6 col-lg-4">
                             <div class="product-card h-100">
                                 <div class="product-img-box">
-                                    <span class="badge-new">جديد</span>
+                                    <span class="badge-new" style="width: 50px">جديد</span>
                                     <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80"
                                         alt="أريكة">
                                     <div class="action-btns">
@@ -219,7 +219,8 @@
                         <div class="col-md-6 col-lg-4">
                             <div class="product-card h-100">
                                 <div class="product-img-box">
-                                    <span class="badge-new" style="background: var(--danger-red)">-15%</span>
+                                    <span class="badge-new" 
+                                        style="background: var(--danger-red);width: 50px">-15%</span>
                                     <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&q=80"
                                         alt="مكتب">
                                     <div class="action-btns">
