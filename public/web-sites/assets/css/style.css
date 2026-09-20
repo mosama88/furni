@@ -567,3 +567,25 @@
     color: var(--theme-yellow);
     background-color: rgba(229, 185, 64, 0.05); /* خلفية ذهبية شفافة جداً */
 }
+
+
+/* تنسيق القائمة المنسدلة للمستخدم */
+.dropdown-menu {
+    border-radius: 6px;
+    margin-top: 10px !important;
+}
+
+.dropdown-item {
+    transition: 0.3s;
+    font-size: 0.95rem;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(229, 185, 64, 0.1) !important;
+    color: var(--theme-yellow, #e5b940) !important;
+}
+
+.dropdown-item.text-danger:hover {
+    background-color: rgba(220, 53, 69, 0.1) !important;
+    color: #dc3545 !important;
+}

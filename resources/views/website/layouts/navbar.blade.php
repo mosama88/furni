@@ -43,8 +43,60 @@
                             class="badge-count">0</span></a>
                     <a href="{{ route('carts') }}" class="icon-btn"><i class="fa-solid fa-cart-shopping"></i><span
                             class="badge-count">2</span></a>
-                    <a href="{{ route('login') }}" class="btn-login ms-3"><i class="fa-solid fa-user"></i> تسجيل
-                        الدخول</a>
+             
+
+                    @auth
+                        <!-- القائمة المنسدلة للمستخدم المسجل -->
+                        <div class="dropdown ms-3">
+                            <button class="btn btn-login dropdown-toggle d-flex align-items-center gap-2" type="button"
+                                id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-user"></i>
+                                <span>
+                                    {{ Auth::user()->full_name }}
+                                </span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end shadow border-0" aria-labelledby="userDropdown"
+                                style="background-color: var(--theme-dark, #141311); border: 1px solid #2a2825 !important;">
+
+                                <!-- رابط الملف الشخصي أو لوحة التحكم -->
+                                <li>
+                                    <a class="dropdown-item text-white py-2 px-3 hover-gold" href="#">
+                                        <i class="fa-solid fa-user-gear me-2"
+                                            style="color: var(--theme-yellow, #e5b940);"></i> الملف الشخصي
+                                    </a>
+                                </li>
+
+                                <!-- رابط الطلبات -->
+                                <li>
+                                    <a class="dropdown-item text-white py-2 px-3 hover-gold" href="#">
+                                        <i class="fa-solid fa-bag-shopping me-2"
+                                            style="color: var(--theme-yellow, #e5b940);"></i> طلباتي
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary opacity-25">
+                                </li>
+
+                                <!-- زر تسجيل الخروج (يجب أن يكون Form في Laravel لحماية الـ CSRF) -->
+                                <li>
+                                    <form action="{{ route('logout') }}" method="POST" class="d-inline">
+                                        @csrf
+                                        <button type="submit"
+                                            class="dropdown-item text-danger py-2 px-3 fw-bold d-flex align-items-center">
+                                            <i class="fa-solid fa-right-from-bracket me-2"></i> تسجيل الخروج
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    @else
+                        <!-- زر تسجيل الدخول العادي إذا لم يكن المستخدم مسجلاً -->
+                        <a href="{{ route('login') }}" class="btn-login ms-3">
+                            <i class="fa-solid fa-user"></i> تسجيل الدخول
+                        </a>
+                    @endauth
+
                 </div>
             </div>
         </div>

@@ -1,5 +1,3 @@
-
-
 @extends('website.layouts.master')
 @section('title', 'الدخول')
 @push('css')
@@ -20,10 +18,8 @@
 
                         <div class="auth-body">
                             <!-- الفورم الخاص بـ Laravel -->
-                            <!-- action="{{ route('login') }}" -->
-                            <form action="#" method="POST">
-                                <!-- @csrf هنا في بليد -->
-
+                            <form action="{{ route('login') }}" method="POST">
+                                @csrf
                                 <div class="mb-4">
                                     <label for="email" class="form-label">البريد الإلكتروني</label>
                                     <div class="input-group">
@@ -32,10 +28,9 @@
                                         <input type="email" class="form-control border-start-0" id="email"
                                             name="email" placeholder="example@email.com" required autofocus>
                                     </div>
-                                    <!-- مكان رسالة الخطأ (لارافل) -->
-                                    <!-- @error('email')
-        <span class="text-danger small mt-1">{{ $message }}</span>
-    @enderror -->
+                                    @error('email')
+                                        <span class="text-danger small mt-1">{{ $message }}</span>
+                                    @enderror
                                 </div>
 
                                 <div class="mb-4">
@@ -50,6 +45,9 @@
                                         <input type="password" class="form-control border-start-0" id="password"
                                             name="password" placeholder="••••••••" required>
                                     </div>
+                                    @error('password')
+                                        <span class="text-danger small mt-1">{{ $message }}</span>
+                                    @enderror
                                 </div>
 
                                 <div class="mb-4 form-check">
@@ -64,7 +62,7 @@
 
                                 <div class="register-link">
                                     <span class="text-muted">ليس لديك حساب؟</span>
-                                    <a href="{{route('register')}}">إنشاء حساب جديد</a>
+                                    <a href="{{ route('register') }}">إنشاء حساب جديد</a>
                                 </div>
                             </form>
                         </div>
