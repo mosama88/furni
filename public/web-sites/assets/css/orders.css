@@ -1,0 +1,154 @@
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icon-btn {
+            background: transparent;
+            border: 1px solid #555;
+            color: #fff;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .icon-btn:hover {
+            border-color: var(--theme-yellow);
+            color: var(--theme-yellow);
+        }
+
+        .icon-btn .badge-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: var(--theme-yellow);
+            color: #000;
+            font-size: 0.75rem;
+            font-weight: 700;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 2px solid var(--theme-dark);
+        }
+
+        .btn-login {
+            background-color: var(--theme-yellow);
+            color: #000;
+            font-weight: 700;
+            border: none;
+            padding: 8px 24px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-login:hover {
+            background-color: #d1a636;
+            color: #000;
+        }
+
+        /* ==================== Page Header ==================== */
+        .page-header {
+            background-color: var(--theme-dark);
+            padding: 40px 0;
+            border-bottom: 4px solid var(--theme-yellow);
+            text-align: center;
+        }
+
+        .page-title {
+            color: #fff;
+            font-weight: 800;
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        /* ==================== Orders Table Styles ==================== */
+        .orders-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--theme-yellow);
+            overflow: hidden;
+        }
+
+        .orders-table th {
+            background-color: #fafafa;
+            color: var(--theme-dark);
+            font-weight: 700;
+            border-bottom: 2px solid #eaeaea;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .orders-table td {
+            vertical-align: middle;
+            padding: 18px 15px;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+            font-weight: 600;
+            color: #444;
+        }
+
+        /* حالة الطلب (Badges) */
+        .badge-status {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        .status-pending {
+            background-color: rgba(255, 193, 7, 0.15);
+            color: #b78103;
+        }
+
+        /* قيد المعالجة */
+        .status-shipping {
+            background-color: rgba(13, 202, 240, 0.15);
+            color: #055160;
+        }
+
+        /* جاري الشحن */
+        .status-completed {
+            background-color: rgba(40, 167, 69, 0.15);
+            color: #155724;
+        }
+
+        /* تم التوصيل */
+        .status-cancelled {
+            background-color: rgba(220, 53, 69, 0.15);
+            color: #721c24;
+        }
+
+        /* ملغي */
+
+        .btn-view-details-orders {
+            background-color: var(--theme-dark);
+            color: #fff;
+            font-weight: 600;
+            padding: 6px 15px;
+            font-size: 0.9rem;
+            border: none;
+            border-radius: 4px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .btn-view-details-orders:hover {
+            background-color: var(--theme-yellow);
+            color: #000;
+        }

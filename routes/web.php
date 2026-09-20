@@ -14,12 +14,9 @@ Route::get('/register', [HomeController::class, 'register'])->name('register');
 Route::get('/reset-password', [HomeController::class, 'resetPassword'])->name('reset-password');
 Route::get('/carts', [HomeController::class, 'cart'])->name('carts');
 Route::get('/payments', [HomeController::class, 'payment'])->name('payments');
+Route::get('/orders', [HomeController::class, 'order'])->name('orders');
 
 
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

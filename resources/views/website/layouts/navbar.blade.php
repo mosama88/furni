@@ -43,7 +43,7 @@
                             class="badge-count">0</span></a>
                     <a href="{{ route('carts') }}" class="icon-btn"><i class="fa-solid fa-cart-shopping"></i><span
                             class="badge-count">2</span></a>
-             
+
 
                     @auth
                         <!-- القائمة المنسدلة للمستخدم المسجل -->
@@ -60,7 +60,7 @@
 
                                 <!-- رابط الملف الشخصي أو لوحة التحكم -->
                                 <li>
-                                    <a class="dropdown-item text-white py-2 px-3 hover-gold" href="#">
+                                    <a class="dropdown-item text-white py-2 px-3 hover-gold" href="{{route('profile.edit')}}">
                                         <i class="fa-solid fa-user-gear me-2"
                                             style="color: var(--theme-yellow, #e5b940);"></i> الملف الشخصي
                                     </a>
@@ -68,7 +68,7 @@
 
                                 <!-- رابط الطلبات -->
                                 <li>
-                                    <a class="dropdown-item text-white py-2 px-3 hover-gold" href="#">
+                                    <a class="dropdown-item text-white py-2 px-3 hover-gold" href="{{route('orders')}}">
                                         <i class="fa-solid fa-bag-shopping me-2"
                                             style="color: var(--theme-yellow, #e5b940);"></i> طلباتي
                                     </a>

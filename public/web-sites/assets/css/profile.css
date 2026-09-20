@@ -1,0 +1,180 @@
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-btn {
+    background: transparent;
+    border: 1px solid #555;
+    color: #fff;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+.icon-btn:hover {
+    border-color: var(--theme-yellow);
+    color: var(--theme-yellow);
+}
+
+.icon-btn .badge-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--theme-yellow);
+    color: #000;
+    font-size: 0.75rem;
+    font-weight: 700;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid var(--theme-dark);
+}
+
+.btn-login {
+    background-color: var(--theme-yellow);
+    color: #000;
+    font-weight: 700;
+    border: none;
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn-login:hover {
+    background-color: #d1a636;
+    color: #000;
+}
+
+/* ==================== Page Header ==================== */
+.page-header {
+    background-color: var(--theme-dark);
+    padding: 40px 0;
+    border-bottom: 4px solid var(--theme-yellow);
+    text-align: center;
+}
+
+.page-title {
+    color: #fff;
+    font-weight: 800;
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+/* ==================== Profile Styles ==================== */
+.profile-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid var(--theme-yellow);
+    overflow: hidden;
+}
+
+.profile-avatar-box {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 20px;
+}
+
+.profile-avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--theme-yellow);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.upload-avatar-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--theme-dark);
+    color: var(--theme-yellow);
+    border: 2px solid #fff;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.upload-avatar-btn:hover {
+    background-color: var(--theme-yellow);
+    color: #000;
+}
+
+.form-label {
+    font-weight: 700;
+    color: var(--theme-dark);
+    font-size: 0.95rem;
+}
+
+.form-control {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.form-control:focus {
+    border-color: var(--theme-yellow);
+    box-shadow: 0 0 0 0.25rem rgba(229, 185, 64, 0.25);
+    background-color: #fff;
+}
+
+.btn-save {
+    background-color: var(--theme-dark);
+    color: #fff;
+    font-weight: 700;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-save:hover {
+    background-color: var(--theme-yellow);
+    color: #000;
+}
+
+/* Stats Cards Side */
+.stat-box {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    border-bottom: 3px solid var(--theme-yellow);
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--theme-dark);
+    margin-bottom: 5px;
+}
+
+.stat-text {
+    color: #666;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 0;
+}

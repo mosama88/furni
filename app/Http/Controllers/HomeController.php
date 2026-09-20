@@ -55,4 +55,8 @@ class HomeController extends Controller
     {
         return view('website.payment');
     }
+    public function order()
+    {
+        return view('website.auth.orders');
+    }
 }
